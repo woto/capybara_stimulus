@@ -12,5 +12,12 @@
 
   <body>
     <%= yield %>
+
+    <div data-controller="hello">
+      <div data-hello-target="output">
+        Placeholder which will be overwritten by app/javascript/controllers/hello_controller.rb
+      </div>
+    </div>
+
   </body>
 </html>
