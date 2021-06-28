@@ -6,6 +6,9 @@ import StimulusControllerResolver from 'stimulus-controller-resolver'
 
 const application = Application.start()
 
+import HelloController from '../controllers/hello_controller.js'
+application.register('hello', HelloController)
+
 StimulusControllerResolver.install(application, async controllerName => (
     (await import(`../controllers/${controllerName}_controller.js`)).default
 ))
